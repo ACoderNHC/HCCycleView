@@ -122,5 +122,5 @@
 
 #### 演示
 
-![demo.gif](https://github.com/ACoderNHC/HCCycleView/tree/master/HCCycleViewDemo/demo.gif)
+![demo.gif](https://github.com/ACoderNHC/HCCycleView/blob/master/HCCycleViewDemo/demo.gif)
 
