@@ -14,17 +14,18 @@
 
 - xib 创建方式
 
-- 先拖入一个UIView控件
-![拖入一个UIVIew控件.png](http://upload-images.jianshu.io/upload_images/641084-8a4389ae3f8e1b89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-- 将UIView的类设置成HCCycleView
+    - 先拖入一个UIView控件
+        ![拖入一个UIVIew控件.png](http://upload-images.jianshu.io/upload_images/641084-8a4389ae3f8e1b89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![设置UIView控件的类.png](http://upload-images.jianshu.io/upload_images/641084-2d2df7b943550903.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+    - 将UIView的类设置成HCCycleView
 
-- 将该View拖线到你要使用的控制器里
+        ![设置UIView控件的类.png](http://upload-images.jianshu.io/upload_images/641084-2d2df7b943550903.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![引入设置好的HCCycleView-1.png](http://upload-images.jianshu.io/upload_images/641084-2604fa37de8b2f1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+    - 将该View拖线到你要使用的控制器里
 
-![引入设置好的HCCycleView-2.png](http://upload-images.jianshu.io/upload_images/641084-2df4a54e15d683b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+        ![引入设置好的HCCycleView-1.png](http://upload-images.jianshu.io/upload_images/641084-2604fa37de8b2f1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+        ![引入设置好的HCCycleView-2.png](http://upload-images.jianshu.io/upload_images/641084-2df4a54e15d683b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 ### 部分属性和方法说明
