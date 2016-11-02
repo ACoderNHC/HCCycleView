@@ -122,5 +122,5 @@
 
 #### 演示
 
-![demo.gif](http://upload-images.jianshu.io/upload_images/641084-36e9180545a0c7fa.gif?imageMogr2/auto-orient/strip)
+![demo.gif](https://github.com/ACoderNHC/HCCycleView/tree/master/HCCycleViewDemo/demo.gif)
 
