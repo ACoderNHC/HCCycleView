@@ -15,6 +15,7 @@
 - xib 创建方式
 
     - 先拖入一个UIView控件
+        
         ![拖入一个UIVIew控件.png](http://upload-images.jianshu.io/upload_images/641084-8a4389ae3f8e1b89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
     - 将UIView的类设置成HCCycleView
