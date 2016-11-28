@@ -105,6 +105,3 @@
     [self.view addSubview:cycleScrollView];
 ```
 
-####详细示例已放到github：https://github.com/ACoderNHC/HCCycleView
-
-
