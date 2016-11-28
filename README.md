@@ -3,6 +3,7 @@
 - 两种创建方式：代码创建和xib创建
 - 支持同时显示本地图片和网络图片
 - 支持自定义PageControl样式
+
 ### 演示
 
 ![创建方式演示](https://github.com/ACoderNHC/HCCycleView/blob/master/HCCycleViewDemo/创建方式.gif)
@@ -25,7 +26,9 @@
 - xib 创建方式
   
   - 先拖入一个UIView控件
+
        ![拖入一个UIVIew控件.png](http://upload-images.jianshu.io/upload_images/641084-8a4389ae3f8e1b89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
   - 将UIView的类设置成HCCycleView
       
       ![设置UIView控件的类.png](http://upload-images.jianshu.io/upload_images/641084-2d2df7b943550903.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -37,9 +40,9 @@
       ![引入设置好的HCCycleView-2.png](http://upload-images.jianshu.io/upload_images/641084-2df4a54e15d683b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
   -  传入图片数组
-```objc
- cycleView.imageArrays = imageArr;
-```
+	```objc
+ 		cycleView.imageArrays = imageArr;
+	```
 
 
 ### 自定义PageControl
@@ -101,6 +104,6 @@
     [self.view addSubview:cycleScrollView];
 ```
 
-######详细示例已放到github：https://github.com/ACoderNHC/HCCycleView
+#####详细示例已放到github：https://github.com/ACoderNHC/HCCycleView
 
 
