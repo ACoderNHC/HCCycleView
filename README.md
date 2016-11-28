@@ -7,6 +7,7 @@
 ### 演示
 
 ![创建方式演示](https://github.com/ACoderNHC/HCCycleView/blob/master/HCCycleViewDemo/创建方式.gif)
+
 ![自定义样式演示](https://github.com/ACoderNHC/HCCycleView/blob/master/HCCycleViewDemo/自定义样式.gif)
 
 ### 使用
@@ -104,6 +105,6 @@
     [self.view addSubview:cycleScrollView];
 ```
 
-#####详细示例已放到github：https://github.com/ACoderNHC/HCCycleView
+####详细示例已放到github：https://github.com/ACoderNHC/HCCycleView
 
 
