@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "HCDefaultModeViewController.h"
-#import "HCCustomModeViewController.h"
+#import "HCNormalViewController.h"
+#import "HCCustomViewController.h"
 
 @interface ViewController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -39,18 +39,18 @@
     switch (indexPath.row) {
         case 0:
         {
-            // 默认样式
-            UIStoryboard *defaultStroyBoard = [UIStoryboard storyboardWithName:NSStringFromClass([HCDefaultModeViewController class]) bundle:nil];
-            HCDefaultModeViewController *defaultVc = [defaultStroyBoard instantiateInitialViewController];
+            // 代码创建
+            UIStoryboard *defaultStroyBoard = [UIStoryboard storyboardWithName:NSStringFromClass([HCNormalViewController class]) bundle:nil];
+            HCNormalViewController *defaultVc = [defaultStroyBoard instantiateInitialViewController];
             [self.navigationController pushViewController:defaultVc animated:YES];
             break;
         }
             
         case 1:
         {
-            // 自定义样式
-            UIStoryboard *customStroyBoard = [UIStoryboard storyboardWithName:NSStringFromClass([HCCustomModeViewController class]) bundle:nil];
-            HCCustomModeViewController *customVc = [customStroyBoard instantiateInitialViewController];
+            // xib创建
+            UIStoryboard *customStroyBoard = [UIStoryboard storyboardWithName:NSStringFromClass([HCCustomViewController class]) bundle:nil];
+            HCCustomViewController *customVc = [customStroyBoard instantiateInitialViewController];
             [self.navigationController pushViewController:customVc animated:YES];
             break;
         }
@@ -68,7 +68,7 @@
     
     switch (indexPath.row) {
         case 0:
-            cell.textLabel.text = @"默认样式";
+            cell.textLabel.text = @"创建方式";
             break;
         case 1:
             cell.textLabel.text = @"自定义样式";

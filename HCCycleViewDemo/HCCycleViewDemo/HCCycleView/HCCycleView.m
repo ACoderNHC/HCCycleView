@@ -45,9 +45,9 @@
     return self;
 }
 
-+ (instancetype)cycleViewWithFrame:(CGRect)frame delegate:(id<HCCycleViewDelegate>)delegate placeholderImage:(UIImage *)placeholderImage {
++ (instancetype)cycleViewWithFrame:(CGRect)frame imageArray:(NSArray *)imageArray placeholderImage:(UIImage *)placeholderImage {
     HCCycleView *cycleView = [[HCCycleView alloc] initWithFrame:frame];
-    cycleView.delegate = delegate;
+    cycleView.imageArrays = imageArray;
     if (placeholderImage != nil) {
         cycleView.placeholderImage = placeholderImage;
     }
@@ -58,6 +58,10 @@
     if (newSuperview == nil) {
         if (_isAutoScroll) {
             [self stopTimer];
+        }
+    } else {
+        if (_isAutoScroll) {
+            [self startTimer];
         }
     }
 }
@@ -77,11 +81,12 @@
 }
 
 - (void)setup {
-    
+    // 占位背景图
     UIImageView *bgImageView = [[UIImageView alloc] initWithFrame:self.bounds];
     self.bgImageView = bgImageView;
     [self insertSubview:bgImageView atIndex:0];
 
+    // 轮播主视图
     UIScrollView *scrollView = [[UIScrollView alloc] init];
     self.scrollView = scrollView;
     scrollView.delegate = self;
@@ -99,12 +104,13 @@
     self.secondImageView = secondImageView;
     [self.scrollView addSubview:self.secondImageView];
     
-    // 添加点击手势
+    // 添加图片点击手势
     self.currentImageView.userInteractionEnabled = YES;
     [self.currentImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)]];
     self.secondImageView.userInteractionEnabled = YES;
     [self.secondImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)]];
 
+    // PageControl
     HCPageControl *pageControl = [[HCPageControl alloc] init];
     pageControl.type = self.pageControlType;
     pageControl.hidesForSinglePage = YES;
@@ -159,9 +165,6 @@
             // 多页
             self.currentImageView.tag = 0;
             self.secondImageView.tag = 1;
-            if (self.isAutoScroll) {
-                [self startTimer];
-            }
         }
         
     }
@@ -175,6 +178,11 @@
 - (void)setPlaceholderImage:(UIImage *)placeholderImage {
     _placeholderImage = placeholderImage;
     self.bgImageView.image = placeholderImage;
+}
+
+- (void)setIsAutoScroll:(BOOL)isAutoScroll {
+    _isAutoScroll = isAutoScroll;
+    [self stopTimer];
 }
 
 #pragma mark - Action
@@ -210,6 +218,9 @@
 }
 
 - (void)autoScroll {
+    if (!_isAutoScroll) {
+        return;
+    }
     [self.scrollView setContentOffset:CGPointMake(self.bounds.size.width*2, 0) animated:YES];
 }
 
@@ -220,17 +231,17 @@
     } else if ([image isKindOfClass:[NSString class]]) {
         if ([(NSString *)image hasPrefix:@"http:"] || [(NSString *)image hasPrefix:@"https:"]) {
             [imageView sd_setImageWithURL:[NSURL URLWithString:(NSString *)image] placeholderImage:self.placeholderImage options:0 completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-                if (cacheType == SDImageCacheTypeNone) {
-                    if (image == nil) {
-                        return;
-                    }
-                    
-                    CATransition *transition = [CATransition animation];
-                    transition.duration = .5;
-                    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-                    transition.type = kCATransitionFade;
-                    [imageView.layer addAnimation:transition forKey:@"fade"];
-                }
+//                if (cacheType == SDImageCacheTypeNone) {
+//                    if (image == nil) {
+//                        return;
+//                    }
+//                    
+//                    CATransition *transition = [CATransition animation];
+//                    transition.duration = .5;
+//                    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+//                    transition.type = kCATransitionFade;
+//                    [imageView.layer addAnimation:transition forKey:@"fade"];
+//                }
             }];
         }
     }
@@ -274,7 +285,7 @@
         [_scrollView setContentOffset:CGPointMake(self.bounds.size.width, 0) animated:NO];
     }
     
-    
+    // 布局PageControl
     if (CGRectEqualToRect(self.pageControlCustomFrame, CGRectZero)) {
         CGRect frame = self.pageControl.frame;
         frame.origin.y = self.bounds.size.height - _pageControlBottom - _pageControlDotSize.height;
@@ -321,10 +332,10 @@
     
     if (offset < self.bounds.size.width) {
         // 左滑
-        _secondImageView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
         _secondImageView.tag = (_currentImageView.tag - 1 + self.dealedImageArray.count) % (self.dealedImageArray.count);
         NSObject *secondImage = self.dealedImageArray[_secondImageView.tag];
         [self setImageView:_secondImageView withImage:secondImage];
+        _secondImageView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
         
         // 更新页码
         if (offset < self.bounds.size.width * 0.5) {
@@ -343,10 +354,10 @@
         
     } else if (offset > self.bounds.size.width) {
         // 右滑
-        _secondImageView.frame = CGRectMake(self.bounds.size.width * 2, 0, self.bounds.size.width, self.bounds.size.height);
         _secondImageView.tag = (_currentImageView.tag + 1) % (self.dealedImageArray.count);
         NSObject *secondImage = self.dealedImageArray[_secondImageView.tag];
         [self setImageView:_secondImageView withImage:secondImage];
+        _secondImageView.frame = CGRectMake(self.bounds.size.width * 2, 0, self.bounds.size.width, self.bounds.size.height);
 
         // 更新页码
         if (offset > self.bounds.size.width * 1.5) {

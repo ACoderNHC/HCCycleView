@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HCCustomModeViewController : UIViewController
+@interface HCCustomViewController : UIViewController
 
 @end

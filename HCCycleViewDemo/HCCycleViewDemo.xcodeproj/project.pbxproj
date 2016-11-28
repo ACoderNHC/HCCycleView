@@ -17,10 +17,10 @@
 		475438C91DC88F790060957E /* HCCycleViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 475438C81DC88F790060957E /* HCCycleViewDemoUITests.m */; };
 		475438DB1DC890B80060957E /* HCCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 475438D81DC890B80060957E /* HCCycleView.m */; };
 		475438DC1DC890B80060957E /* HCPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 475438DA1DC890B80060957E /* HCPageControl.m */; };
-		475438DF1DC8A89E0060957E /* HCDefaultModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475438DE1DC8A89E0060957E /* HCDefaultModeViewController.m */; };
-		475438E21DC8A8D60060957E /* HCCustomModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475438E11DC8A8D60060957E /* HCCustomModeViewController.m */; };
-		475438E41DC8A95A0060957E /* HCDefaultModeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475438E31DC8A95A0060957E /* HCDefaultModeViewController.storyboard */; };
-		475438E61DC8A9A60060957E /* HCCustomModeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475438E51DC8A9A60060957E /* HCCustomModeViewController.storyboard */; };
+		475438DF1DC8A89E0060957E /* HCNormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475438DE1DC8A89E0060957E /* HCNormalViewController.m */; };
+		475438E21DC8A8D60060957E /* HCCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475438E11DC8A8D60060957E /* HCCustomViewController.m */; };
+		475438E41DC8A95A0060957E /* HCNormalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475438E31DC8A95A0060957E /* HCNormalViewController.storyboard */; };
+		475438E61DC8A9A60060957E /* HCCustomViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475438E51DC8A9A60060957E /* HCCustomViewController.storyboard */; };
 		475438EA1DC8AFA40060957E /* place_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 475438E91DC8AFA40060957E /* place_image.jpg */; };
 		475438EC1DC8C8F60060957E /* local_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 475438EB1DC8C8F60060957E /* local_image.jpg */; };
 		F52C9AED0BC4ECE04740082D /* libPods-HCCycleViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB4149315391BD8F1ACECE37 /* libPods-HCCycleViewDemo.a */; };
@@ -64,12 +64,12 @@
 		475438D81DC890B80060957E /* HCCycleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCCycleView.m; sourceTree = "<group>"; };
 		475438D91DC890B80060957E /* HCPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCPageControl.h; sourceTree = "<group>"; };
 		475438DA1DC890B80060957E /* HCPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCPageControl.m; sourceTree = "<group>"; };
-		475438DD1DC8A89E0060957E /* HCDefaultModeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDefaultModeViewController.h; sourceTree = "<group>"; };
-		475438DE1DC8A89E0060957E /* HCDefaultModeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDefaultModeViewController.m; sourceTree = "<group>"; };
-		475438E01DC8A8D60060957E /* HCCustomModeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCCustomModeViewController.h; sourceTree = "<group>"; };
-		475438E11DC8A8D60060957E /* HCCustomModeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCCustomModeViewController.m; sourceTree = "<group>"; };
-		475438E31DC8A95A0060957E /* HCDefaultModeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HCDefaultModeViewController.storyboard; sourceTree = "<group>"; };
-		475438E51DC8A9A60060957E /* HCCustomModeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HCCustomModeViewController.storyboard; sourceTree = "<group>"; };
+		475438DD1DC8A89E0060957E /* HCNormalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCNormalViewController.h; sourceTree = "<group>"; };
+		475438DE1DC8A89E0060957E /* HCNormalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCNormalViewController.m; sourceTree = "<group>"; };
+		475438E01DC8A8D60060957E /* HCCustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCCustomViewController.h; sourceTree = "<group>"; };
+		475438E11DC8A8D60060957E /* HCCustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCCustomViewController.m; sourceTree = "<group>"; };
+		475438E31DC8A95A0060957E /* HCNormalViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HCNormalViewController.storyboard; sourceTree = "<group>"; };
+		475438E51DC8A9A60060957E /* HCCustomViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HCCustomViewController.storyboard; sourceTree = "<group>"; };
 		475438E81DC8AC790060957E /* HCCycleViewDemo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCCycleViewDemo.pch; sourceTree = "<group>"; };
 		475438E91DC8AFA40060957E /* place_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = place_image.jpg; sourceTree = "<group>"; };
 		475438EB1DC8C8F60060957E /* local_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = local_image.jpg; sourceTree = "<group>"; };
@@ -134,12 +134,12 @@
 				475438A71DC88F790060957E /* AppDelegate.m */,
 				475438A91DC88F790060957E /* ViewController.h */,
 				475438AA1DC88F790060957E /* ViewController.m */,
-				475438DD1DC8A89E0060957E /* HCDefaultModeViewController.h */,
-				475438DE1DC8A89E0060957E /* HCDefaultModeViewController.m */,
-				475438E31DC8A95A0060957E /* HCDefaultModeViewController.storyboard */,
-				475438E01DC8A8D60060957E /* HCCustomModeViewController.h */,
-				475438E11DC8A8D60060957E /* HCCustomModeViewController.m */,
-				475438E51DC8A9A60060957E /* HCCustomModeViewController.storyboard */,
+				475438DD1DC8A89E0060957E /* HCNormalViewController.h */,
+				475438DE1DC8A89E0060957E /* HCNormalViewController.m */,
+				475438E31DC8A95A0060957E /* HCNormalViewController.storyboard */,
+				475438E01DC8A8D60060957E /* HCCustomViewController.h */,
+				475438E11DC8A8D60060957E /* HCCustomViewController.m */,
+				475438E51DC8A9A60060957E /* HCCustomViewController.storyboard */,
 				475438AC1DC88F790060957E /* Main.storyboard */,
 				475438AF1DC88F790060957E /* Assets.xcassets */,
 				475438B11DC88F790060957E /* LaunchScreen.storyboard */,
@@ -321,8 +321,8 @@
 				475438B31DC88F790060957E /* LaunchScreen.storyboard in Resources */,
 				475438EC1DC8C8F60060957E /* local_image.jpg in Resources */,
 				475438EA1DC8AFA40060957E /* place_image.jpg in Resources */,
-				475438E41DC8A95A0060957E /* HCDefaultModeViewController.storyboard in Resources */,
-				475438E61DC8A9A60060957E /* HCCustomModeViewController.storyboard in Resources */,
+				475438E41DC8A95A0060957E /* HCNormalViewController.storyboard in Resources */,
+				475438E61DC8A9A60060957E /* HCCustomViewController.storyboard in Resources */,
 				475438B01DC88F790060957E /* Assets.xcassets in Resources */,
 				475438AE1DC88F790060957E /* Main.storyboard in Resources */,
 			);
@@ -399,10 +399,10 @@
 			files = (
 				475438AB1DC88F790060957E /* ViewController.m in Sources */,
 				475438A81DC88F790060957E /* AppDelegate.m in Sources */,
-				475438E21DC8A8D60060957E /* HCCustomModeViewController.m in Sources */,
+				475438E21DC8A8D60060957E /* HCCustomViewController.m in Sources */,
 				475438DB1DC890B80060957E /* HCCycleView.m in Sources */,
 				475438DC1DC890B80060957E /* HCPageControl.m in Sources */,
-				475438DF1DC8A89E0060957E /* HCDefaultModeViewController.m in Sources */,
+				475438DF1DC8A89E0060957E /* HCNormalViewController.m in Sources */,
 				475438A51DC88F790060957E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

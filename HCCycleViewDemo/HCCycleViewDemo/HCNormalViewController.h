@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HCDefaultModeViewController : UIViewController
+@interface HCNormalViewController : UIViewController
 
 @end
